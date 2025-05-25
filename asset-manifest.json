@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/crossword-game/static/css/main.af6cf68a.css",
+    "main.js": "/crossword-game/static/js/main.04a910da.js",
+    "static/js/453.7ae8d9f2.chunk.js": "/crossword-game/static/js/453.7ae8d9f2.chunk.js",
+    "index.html": "/crossword-game/index.html",
+    "main.af6cf68a.css.map": "/crossword-game/static/css/main.af6cf68a.css.map",
+    "main.04a910da.js.map": "/crossword-game/static/js/main.04a910da.js.map",
+    "453.7ae8d9f2.chunk.js.map": "/crossword-game/static/js/453.7ae8d9f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af6cf68a.css",
+    "static/js/main.04a910da.js"
+  ]
+}
