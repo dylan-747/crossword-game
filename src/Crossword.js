@@ -2,48 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 // Abbie's Daily Crossword data (5×5 word square) — all entries valid
-const crosswordData = {
-  size: 5,
-  grid: [
-    ["G", "R", "A", "D", "E"],
-    ["L", "O", "V", "E", "D"],
-    ["A", "M", "O", "N", "G"],
-    ["R", "A", "I", "S", "E"],
-    ["E", "N", "D", "E", "D"],
-  ],
-  clues: {
-    across: {
-      1: "A mark or level",
-      2: "Past tense of love",
-      3: "In the middle of",
-      4: "To compensate with pay",
-      5: "Finished or completed",
-    },
-    down: {
-      1: "An intense stare",
-      2: "Auntie Debbie's oldest son",
-      3: "To keep away from",
-      4: "Closely packed",
-      5: "Having a border or edge",
-    },
-  },
-  positions: {
-    across: {
-      1: { row: 0, col: 0, answer: "GRADE" },
-      2: { row: 1, col: 0, answer: "LOVED" },
-      3: { row: 2, col: 0, answer: "AMONG" },
-      4: { row: 3, col: 0, answer: "RAISE" },
-      5: { row: 4, col: 0, answer: "ENDED" },
-    },
-    down: {
-      1: { row: 0, col: 0, answer: "GLARE" },
-      2: { row: 0, col: 1, answer: "ROMAN" },
-      3: { row: 0, col: 2, answer: "AVOID" },
-      4: { row: 0, col: 3, answer: "DENSE" },
-      5: { row: 0, col: 4, answer: "EDGED" },
-    },
-  },
-};
+import puzzles from "./puzzles";
+
+const today = new Date().toISOString().split("T")[0];
+const crosswordData = puzzles[today] || puzzles.default;
+
 
 export default function Crossword() {
   const [gridInput, setGridInput] = useState(
